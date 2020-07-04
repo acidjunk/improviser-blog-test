@@ -1,0 +1,53 @@
+{
+  "name": "improviser-blog",
+  "version": "1.0.1",
+  "author": "Rene Dohmen <acidjunk@gmail.com>",
+  "description": "iMproviser blog TEST",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "lint": "eslint src/ && prettier --check 'src/**/*.js'",
+    "fix": "eslint --fix src/ && prettier --write 'src/**/*.js'",
+    "start": "npm run develop",
+    "build": "gatsby build --prefix-paths",
+    "serve": "gatsby serve",
+    "deploy-gh-pages": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "gatsby build --prefix-paths && aws s3 sync public/ s3://some-s3-bucket --delete"
+  },
+  "dependencies": {
+    "@material-ui/core": "4.10.1",
+    "@material-ui/styles": "4.10.0",
+    "@mdx-js/mdx": "^1.6.6",
+    "@mdx-js/react": "^1.6.6",
+    "gatsby": "2.22.20",
+    "gatsby-plugin-manifest": "^2.4.12",
+    "gatsby-plugin-mdx": "^1.2.18",
+    "gatsby-plugin-offline": "^3.2.11",
+    "gatsby-plugin-react-helmet": "3.3.3",
+    "gatsby-plugin-remove-serviceworker": "1.0.0",
+    "gatsby-plugin-sharp": "^2.6.12",
+    "gatsby-plugin-stylus": "2.3.3",
+    "gatsby-remark-images": "^3.3.11",
+    "gatsby-source-apiserver": "^2.1.6",
+    "gatsby-source-filesystem": "2.3.10",
+    "gatsby-transformer-remark": "2.8.14",
+    "gatsby-transformer-sharp": "^2.5.5",
+    "gh-pages": "3.0.0",
+    "jss": "10.2.0",
+    "mdi-material-ui": "6.16.0",
+    "prop-types": "15.7.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-helmet": "6.0.0",
+    "react-jss": "10.2.0",
+    "react-swipeable-views": "0.13.9",
+    "react-swipeable-views-utils": "0.13.9"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.1.0",
+    "eslint": "7.1.0",
+    "eslint-plugin-react": "7.20.0",
+    "eslint-plugin-react-hooks": "4.0.4",
+    "prettier": "2.0.5"
+  }
+}
